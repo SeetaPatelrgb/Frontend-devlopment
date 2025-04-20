@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countings</title>
+   <style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+    }
+    .main
+    {
+        background-color: aqua;
+        padding: 15%;
+        border-radius: 10px;
+
+    }
+    h2{
+        text-align: center;
+        background-color: aquamarine;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    button{
+        border-radius: 10px;
+        border: none;
+        height: 30px;
+        width: 60px;
+margin-inline: 5px;
+    }
+    #str 
+    {
+        background-color: rgb(234, 113, 113);
+        color: white;
+        font-size: large;
+    }
+    #stp
+    {
+        background-color: rgb(60, 88, 18);
+        color: white;
+        font-size: large;
+    }
+    #rst
+    {
+        background-color: darkgoldenrod;
+        color: white;
+        font-size: large;
+    }
+    .btns
+    {
+        display: flex;
+        justify-content: center;
+    }
+   </style>
+</head>
+<body>
+    <div class="main">
+        <h3>hey start your counting </h3>
+        <div class="count"><h2 id="head">0</h2></div>
+        <div class="btns">
+            <button id="str" onclick="start()">start </button>
+            <button id="stp"onclick="stop()">stop</button>
+            <button id="rst"onclick="reset()">reset</button>
+        </div>
+    </div>
+    <script>
+        let ele=document.getElementById("head");
+        let c=0;
+let id;
+        function start(){
+
+ id=setInterval(count,10);
+
+
+    }
+    function stop()
+    {
+        clearInterval(id);
+    }
+    function count(){
+c++;
+ele.innerHTML=c;
+        }
+       function reset()
+       {
+        ele.innerText="0";
+       }
+
+    </script>
+</body>
+</html>

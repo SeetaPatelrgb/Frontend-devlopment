@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin-top: 100px;
+        }
+        input{
+            border: none;
+            background: none;
+            position: relative;
+           width: 100%;
+           padding: 13px 20px;
+        }
+       table
+        {
+          
+            width: 40%;
+        }
+        td{
+            border-radius: 10px;
+           padding: 0;
+            background-color: antiquewhite;
+        }
+        table
+        {
+            border: none;
+            background-color: bisque;
+            border-radius: 10px;
+        }
+        h2{
+            background-color: bisque;
+            border-radius: 10px;
+        padding: 10px;
+
+        }
+        #ans
+        {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        form{
+           background-color: azure;
+           padding:2%;
+           border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form name="formc">
+  <div class="MAIN" name="tbl">
+
+   <table border="1" cellpadding="15">
+  <h2 align="center">Calculator</h2>
+    <tr>
+        <td colspan="3"><input type="button"id="ans" value=""></td>  
+        <td><input type="button" value="clear" onclick="formc.ans.value=''"></td>  
+       </tr>
+       <tr>
+           <td><input type="button" value="1" onclick="formc.ans.value+=1"></td>  
+           <td><input type="button" value="2"onclick="formc.ans.value+=2"></td>  
+           <td><input type="button" value="3"onclick="formc.ans.value+=3"></td>  
+           <td><input type="button" value="+"onclick="formc.ans.value+='+'"></td>  
+          </tr>
+          <tr>
+            <td><input type="button" value="4"onclick="formc.ans.value+=4"></td>  
+            <td><input type="button" value="5"onclick="formc.ans.value+=5"></td>  
+            <td><input type="button" value="6"onclick="formc.ans.value+=6"></td>  
+            <td><input type="button" value="-"onclick="formc.ans.value+='-'"></td>  
+           </tr>
+           <tr>
+            <td><input type="button" value="7"onclick="formc.ans.value+=7"></td>  
+            <td><input type="button" value="8"onclick="formc.ans.value+=8"></td>  
+            <td><input type="button" value="9"onclick="formc.ans.value+=9"></td>  
+            <td><input type="button" value="*"onclick="formc.ans.value+='*'"></td>  
+           </tr>
+           <tr>
+            <td><input type="button" value="0"onclick="formc.ans.value+=0"></td>  
+            <td><input type="button" value="%"onclick="formc.ans.value+='%'"></td>  
+            <td><input type="button" value="/"onclick="formc.ans.value+='/'"></td>  
+            <td><input type="button" value="="onclick="formc.ans.value=eval(formc.ans.value)"></td>  
+           </tr>
+   </table>
+  </div>  
+</form>
+</body>
+</html>
